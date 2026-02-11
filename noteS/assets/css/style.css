@@ -184,3 +184,38 @@ body {
   padding: 0.6em 1em;
   font-size: 0.8rem;
 }
+
+.pomodoro-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(246, 241, 209, 0.2);
+}
+
+.timer-group {
+  text-align: center;
+  color: #F6F1D1;
+}
+
+.timer-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.timer-controls input {
+  width: 45px;
+  background: transparent;
+  border: 1px solid #F6F1D1;
+  color: #F6F1D1;
+  padding: 2px;
+  text-align: center;
+}
