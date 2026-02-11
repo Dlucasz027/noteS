@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme&amp;family=Space+Mono&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css">
   <title>noteS</title>
 </head>
 <body>
@@ -16,12 +17,15 @@
       </h1>
   
       <form class="form" action="">
-        <input class="form-input" type="text" data-form-input>
-        <button class="form-button" data-form-button>New Items</button>
+        <div class="ui action input custom-input-group">
+          <input type="text" placeholder="Add a note..." data-form-input>
+          <button class="ui icon button teal" data-form-button>
+            <i class="plus icon"></i>
+          </button>
+        </div>
       </form>
 
       <ul class="list" data-list>
-        
       </ul>
     </div>
     <script src="listTasks.js"></script>

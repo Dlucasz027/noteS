@@ -1,56 +1,68 @@
 ( () => {
-    
-    let makeTask= (event) => {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    event.preventDefault()
-    let list = document.querySelector('[data-list]')
-    let input = document.querySelector('[data-form-input]')
-    let values = input.value
-    let task = document.createElement('li')
+    const updateStorage = () => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    };
 
-    task.classList.add('task')
-    let content = `<p class="content">${values}<p>`
+    const render = () => {
+        const list = document.querySelector('[data-list]');
+        list.innerHTML = ''; 
 
-    task.innerHTML = content
-    
-    task.appendChild(DoneButton())
-    task.appendChild(RemoveButton())
-    list.appendChild(task)
-    input.value = " "
-}
+        tasks.forEach((task, index) => {
+            const taskElement = document.createElement('li');
+            taskElement.classList.add('task');
+            if (task.done) taskElement.classList.add('done');
 
-let newTask = document.querySelector('[data-form-button]')
-newTask.addEventListener('click', makeTask)
+            const content = `<p class="content">${task.text}</p>`;
+            taskElement.innerHTML = content;
 
-let DoneButton = () => {
-    let doneButton = document.createElement('button')
+            taskElement.appendChild(DoneButton(index));
+            taskElement.appendChild(RemoveButton(index));
+            
+            list.appendChild(taskElement);
+        });
+    };
 
-    doneButton.classList.add('check-button')
-    doneButton.innerText = 'Done'
-    doneButton.addEventListener('click', doneTask)
-    return doneButton
-}
+    let makeTask = (event) => {
+        event.preventDefault();
+        let input = document.querySelector('[data-form-input]');
+        let value = input.value.trim();
 
-let doneTask = (event ) => {
-    let doneButton = event.target
-    let taskCompleted = doneButton.parentElement
+        if (value !== "") {
+            tasks.push({ text: value, done: false }); 
+            updateStorage(); 
+            render();       
+            input.value = "";
+        }
+    };
 
-    taskCompleted.classList.toggle('done')
-}
+    let newTask = document.querySelector('[data-form-button]');
+    newTask.addEventListener('click', makeTask);
 
-let RemoveButton = () => {
-    let removeButton = document.createElement('button')
-    removeButton.innerText = 'Remove'
+    let DoneButton = (index) => {
+        let doneButton = document.createElement('button');
+        doneButton.classList.add('ui', 'positive','icon','button', 'check-button');
+        doneButton.innerHTML = '<i class="check icon"></i>';
+        doneButton.addEventListener('click', () => {
+            tasks[index].done = !tasks[index].done; 
+            updateStorage();
+            render();
+        });
+        return doneButton;
+    };
 
-    removeButton.addEventListener('click', removeTask)
-    return removeButton
-}
+    let RemoveButton = (index) => {
+        let removeButton = document.createElement('button');
+        removeButton.classList.add('ui', 'negative', 'icon', 'button');
+        removeButton.innerHTML = '<i class="trash icon"></i>';
+        removeButton.addEventListener('click', () => {
+            tasks.splice(index, 1); 
+            updateStorage();
+            render();
+        });
+        return removeButton;
+    };
 
-let removeTask = (event) => {
-    let removeButton = event.target
-    let taskcompleted = removeButton.parentElement
-
-    taskcompleted.remove()
-    return removeButton
-}
-})()
+    render();
+})();
