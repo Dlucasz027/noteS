@@ -205,17 +205,3 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.timer-controls {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.timer-controls input {
-  width: 45px;
-  background: transparent;
-  border: 1px solid #F6F1D1;
-  color: #F6F1D1;
-  padding: 2px;
-  text-align: center;
-}

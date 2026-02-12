@@ -69,13 +69,13 @@
     let timerInterval;
     let activeTimer = null;
 
-    const formatTime = (seconds) => {
-        const mins = Math.floor(seconds / 60);
-        const secs = seconds % 60;
+    let formatTime = (seconds) => {
+        let mins = Math.floor(seconds / 60);
+        let secs = seconds % 60;
         return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     };
 
-    const startTimer = (duration, display, type) => {
+    let startTimer = (duration, display, type) => {
         clearInterval(timerInterval);
         
         let timeLeft = duration;
@@ -93,14 +93,14 @@
     };
 
     document.getElementById('start-work').addEventListener('click', () => {
-        const minutes = document.getElementById('work-input').value;
-        const display = document.getElementById('work-display');
+        let minutes = document.getElementById('work-input').value;
+        let display = document.getElementById('work-display');
         startTimer(minutes * 60, display, 'work');
     });
 
     document.getElementById('start-break').addEventListener('click', () => {
-        const minutes = document.getElementById('break-input').value;
-        const display = document.getElementById('break-display');
+        let minutes = document.getElementById('break-input').value;
+        let display = document.getElementById('break-display');
         startTimer(minutes * 60, display, 'break');
     });
 })();
