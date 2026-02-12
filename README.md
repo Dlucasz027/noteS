@@ -43,6 +43,7 @@
   </tr>
 </table>
 ---
+
 ## Features
 - Create, complete, and delete tasks
 - Persistent task storage using Local Storage
