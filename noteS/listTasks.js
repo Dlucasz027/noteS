@@ -5,16 +5,16 @@
         localStorage.setItem('tasks', JSON.stringify(tasks));
     };
 
-    const render = () => {
-        const list = document.querySelector('[data-list]');
+    let render = () => {
+        let list = document.querySelector('[data-list]');
         list.innerHTML = ''; 
 
         tasks.forEach((task, index) => {
-            const taskElement = document.createElement('li');
+            let taskElement = document.createElement('li');
             taskElement.classList.add('task');
             if (task.done) taskElement.classList.add('done');
 
-            const content = `<p class="content">${task.text}</p>`;
+            let content = `<p class="content">${task.text}</p>`;
             taskElement.innerHTML = content;
 
             taskElement.appendChild(DoneButton(index));
