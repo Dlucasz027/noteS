@@ -29,15 +29,20 @@
 - Build interactive UI elements using JavaScript
 - Organize front-end logic in a clean and maintainable way
 - Create a project that balances simplicity, usability, and visual style
-
-<p align="center">
-  <img width="450" height="623" alt="To-Do List Main Screen"
-       src="https://github.com/user-attachments/assets/5fa5ddd6-ffb9-4ef5-a22b-3bbbe44e6ec7"/>
-
-  <img width="450" height="623" alt="Pomodoro Timer in Action"
-       src="https://github.com/user-attachments/assets/87069cb4-9855-4dda-ac72-9728f5d623d8"/>
-</p>
-
+---
+<table align="center">
+  <tr>
+    <td>
+      <img width="400" alt="To-Do List Main Screen"
+           src="https://github.com/user-attachments/assets/5fa5ddd6-ffb9-4ef5-a22b-3bbbe44e6ec7"/>
+    </td>
+    <td>
+      <img width="400" alt="Pomodoro Timer in Action"
+           src="https://github.com/user-attachments/assets/87069cb4-9855-4dda-ac72-9728f5d623d8"/>
+    </td>
+  </tr>
+</table>
+---
 ## Features
 - Create, complete, and delete tasks
 - Persistent task storage using Local Storage
