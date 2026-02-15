@@ -1,7 +1,7 @@
 ( () => {
     let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    const updateStorage = () => {
+    let updateStorage = () => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     };
 
