@@ -44,15 +44,18 @@
 
   <tr>
     <td align="center">
-      <img width="300" alt="Modal message"
-           src="https://github.com/user-attachments/assets/0c7cd46d-95ce-4e75-bf7d-459a59941874"/>
+      <img width="300" alt="Modal Screenshot 1"
+           src="https://github.com/user-attachments/assets/9414f5bf-a8f5-4ba0-b181-b57736a1ffc2"/>
     </td>
+
     <td align="center">
-      <img width="300" alt="Modal message2"
-           src="https://github.com/user-attachments/assets/773e2b37-5f80-4684-85f6-202bed850722"/>
+      <img width="300" alt="Modal Screenshot 2"
+           src="https://github.com/user-attachments/assets/d055c92b-ea1b-4cc9-b0e8-0ddb1a288b50"/>
     </td>
   </tr>
 </table>
+
+
 
 ---
 
