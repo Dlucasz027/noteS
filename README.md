@@ -32,13 +32,24 @@
 ---
 <table align="center">
   <tr>
-    <td>
-      <img width="400" alt="To-Do List Main Screen"
+    <td align="center">
+      <img width="300" alt="To-Do List Main Screen"
            src="https://github.com/user-attachments/assets/5fa5ddd6-ffb9-4ef5-a22b-3bbbe44e6ec7"/>
     </td>
-    <td>
-      <img width="400" alt="Pomodoro Timer in Action"
+    <td align="center">
+      <img width="300" alt="Pomodoro Timer in Action"
            src="https://github.com/user-attachments/assets/87069cb4-9855-4dda-ac72-9728f5d623d8"/>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img width="300" alt="Modal message"
+           src="https://github.com/user-attachments/assets/0c7cd46d-95ce-4e75-bf7d-459a59941874"/>
+    </td>
+    <td align="center">
+      <img width="300" alt="Modal message2"
+           src="https://github.com/user-attachments/assets/773e2b37-5f80-4684-85f6-202bed850722"/>
     </td>
   </tr>
 </table>
