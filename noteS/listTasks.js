@@ -67,7 +67,15 @@
     render();
 
     let timerInterval;
-    let activeTimer = null;
+
+    let openModal = (type) => {
+        let message = type === 'work'
+            ? "Work session finished! Time to rest."
+            : "Break over! Get back to work.";
+
+        document.getElementById('modal-message').innerText = message;
+        $('#timer-modal').modal('show');
+    };
 
     let formatTime = (seconds) => {
         let mins = Math.floor(seconds / 60);
@@ -85,10 +93,10 @@
             timeLeft--;
             display.innerText = formatTime(timeLeft);
 
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                alert(type === 'work' ? "Work session finished! Time to rest." : "Break over! Get back to work.");
-            }
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            openModal(type);
+        }
         }, 1000);
     };
 

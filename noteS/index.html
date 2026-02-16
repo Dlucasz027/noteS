@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme&amp;family=Space+Mono&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css">
@@ -26,6 +28,7 @@
       </form>
 
       <ul class="list" data-list></ul>
+
       <div class="pomodoro-footer">
         <div class="timer-group break">
           <span>PAUSE</span>
@@ -41,12 +44,24 @@
         <div class="timer-group work">
           <span>WORK</span>
           <div class="timer-display" id="work-display">25:00</div>
+
           <div class="timer-controls">
             <input type="number" id="work-input" min="1" max="60" value="25">
             <button class="ui icon circular button teal" id="start-work">
               <i class="play icon"></i>
             </button>
           </div>
+          
+          <div class="ui mini modal" id="timer-modal">
+            <div class="header" id="modal-header"></div>
+            <div class="content">
+              <p id="modal-message"></p>
+            </div>
+            <div class="actions">
+              <div class="ui approve button">OK</div>
+            </div>
+          </div>
+        
         </div>
       </div>
     </div>
