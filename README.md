@@ -30,33 +30,33 @@
 - Organize front-end logic in a clean and maintainable way
 - Create a project that balances simplicity, usability, and visual style
 ---
-<table align="center" cellpadding="20">
+<table align="center">
   <tr>
     <td align="center">
-      <img width="280" alt="To-Do List Main Screen"
+      <img width="300" alt="To-Do List Main Screen"
            src="https://github.com/user-attachments/assets/5fa5ddd6-ffb9-4ef5-a22b-3bbbe44e6ec7"/>
     </td>
-
     <td align="center">
-      <img width="280" alt="Pomodoro Timer in Action"
+      <img width="300" alt="Pomodoro Timer in Action"
            src="https://github.com/user-attachments/assets/87069cb4-9855-4dda-ac72-9728f5d623d8"/>
-    </td>
-  </tr>
-
-  <tr>
-    <td align="center">
-      <img width="280" alt="Modal Screenshot 1"
-           src="https://github.com/user-attachments/assets/9414f5bf-a8f5-4ba0-b181-b57736a1ffc2"/>
-    </td>
-
-    <td align="center">
-      <img width="280" alt="Modal Screenshot 2"
-           src="https://github.com/user-attachments/assets/d055c92b-ea1b-4cc9-b0e8-0ddb1a288b50"/>
     </td>
   </tr>
 </table>
 
+---
 
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="300" alt="Modal message"
+           src="https://github.com/user-attachments/assets/0c7cd46d-95ce-4e75-bf7d-459a59941874"/>
+    </td>
+    <td align="center">
+      <img width="300" alt="Modal message2"
+           src="https://github.com/user-attachments/assets/773e2b37-5f80-4684-85f6-202bed850722"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
